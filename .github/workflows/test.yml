@@ -18,5 +18,6 @@ jobs:
         with:
           push: false
           tags: |
-            knutia/fast-realip:test, 
+            knutia/fast-realip:test
             knutia/fast-realip:latest
+            
