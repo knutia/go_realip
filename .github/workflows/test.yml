@@ -1,4 +1,4 @@
-name: Generate terraform docs
+name: ci pr build
 on:
   - pull_request
 
