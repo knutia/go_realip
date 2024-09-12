@@ -17,4 +17,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: false
-          tags: knutia/fast-realip:test
+          tags: |
+            knutia/fast-realip:test
+            knutia/fast-realip:latest
+            
