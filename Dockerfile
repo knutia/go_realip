@@ -1,9 +1,9 @@
 #Dockerfile References: https://docs.docker.com/engine/reference/builder/
 
 # Start from the latest golang base image
-FROM golang:latest as builder
+FROM golang:latest AS builder
 
-ENV PORT 8000
+ENV PORT=8000
 EXPOSE 8000
 RUN mkdir /app 
 ADD . /app/ 
@@ -17,7 +17,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
 ######## Start a new stage from scratch #######
 FROM alpine:latest  
 
-ENV PORT 8000
+ENV PORT=8000
 
 # Expose port 8080 to the outside world
 EXPOSE 8000

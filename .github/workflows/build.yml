@@ -37,7 +37,9 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: knutia/fast-realip:latest knutia/fast-realip:${{ steps.tag.outputs.new_tag }}
+          tags: 
+            knutia/fast-realip:latest
+            knutia/fast-realip:${{ steps.tag.outputs.new_tag }}
       -
         name: Create release notes
         id: release_notes
